@@ -6,7 +6,7 @@ body {
 }
 .v17_89 {
   width: 100%;
-  height: 1024px;
+  height: 1000px;
   background: rgba(255,255,255,1);
   opacity: 1;
   position: relative;
@@ -20,8 +20,11 @@ body {
   margin: 5%;
 }
 .v17_146 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
   width: 663px;
-  color: rgba(91,91,91,1);
+  font-family: "Helvetica Neue", sans-serif;
   position: absolute;
   top: 61px;
   left: 509px;
@@ -30,17 +33,18 @@ body {
   font-size: 50px;
   opacity: 1;
   text-align: left;
+  float: center;
 }
 .v17_91 {
   width: 480px;
-  height: 1134px;
+  height: 700px;
   background: url("../images/v17_91.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 110px;
+  top: 0px;
   left: 0px;
   overflow: hidden;
 }
@@ -50,19 +54,20 @@ body {
   background: rgba(255,255,255,1);
   opacity: 1;
   position: absolute;
-  top: 110px;
+  top: 0px;
   left: 0px;
   border: 1px solid rgba(217,217,217,1);
-  border-top-right-radius: 30px;
+  border-top-right-radius: 10px;
   border-bottom-right-radius: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   float: left;
+ 
 }
 .v17_93 {
   width: 369px;
   height: 369px;
-  background: url("v17_93.png");
+  background: url("../images/v17_93.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
