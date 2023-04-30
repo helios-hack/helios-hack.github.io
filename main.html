@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
 
-    <title>Map</title>
+  <title>Map</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.01">
 
-	
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    <link href="style.css" rel="stylesheet" />
-	<style>
-	
-	html,
-	body {
-	  height: 100%;
-	  padding: 0;
-	}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
-	#map {
-	  height: 75%;
-	  width: 55%;
-	  margin: 5%;
-      position: relative;
-        left: 600px;
-        top: 10px;
-        transform: translateY(150px);
-	}
-    .logo-image {
-  width: 300px;
-  height: 200px;
+  <link href="./css/main.css" rel="stylesheet" />
+
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      padding: 0;
     }
-	
-	</style>
-	
-  </head>
 
-  <body>
-    
-    <div class="v17_89">
-    
+    #map {
+      height: 75%;
+      width: 55%;
+      margin: 5%;
+      position: relative;
+      left: 600px;
+      top: 0px;
+      transform: translateY(10px);
+    }
+
+    .logo-image {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="v17_89">
+
     <!-- <span class="v17_146">Solar calculator</span> -->
-    <div class="v17_91"><div class="v17_92"></div>
-    <div class="v17_93"></div><div class="v17_94">
+    <div class="v17_91">
+      <div class="v17_92"></div>
+      <div class="v17_93"></div>
+      <div class="v17_94">
         <div class="v17_95"></div>
         <span class="v17_96">Solar potential</span>
         <span class="v17_97">Solar irradiance</span>
@@ -58,70 +64,89 @@
         <span class="v17_104">Shadows </span>
         <span class="v17_105">Orientation</span>
         <span class="v17_106">Obstacles on roof</span>
-        <span class="v17_114">##/100</span></div>
-        <div class="v17_120"><div class="v17_121"></div>
+        <span class="v17_114">##/100</span>
+      </div>
+      <div class="v17_120">
+        <div class="v17_121"></div>
         <span class="v17_122">Energy production</span>
         <div class="v21_17"></div>
         <span class="v17_123">### KW /day</span>
         <span class="v17_124">Estimated ### KW /year</span>
-    </div><div class="v17_129"><div class="v17_130"></div>
-    <span class="v17_131">Carbon footprint reduction</span>
-    <div class="v23_20"></div><span class="v17_132">##%</span></div>
-    <div class="v23_21"><div class="v23_22"></div>
-    <span class="v23_23">Germany-wide ranking</span>
-    <div class="v23_24"></div><span class="v23_25">###</span></div>
-    <div class="v17_133"><div class="v17_134"></div>
-    <span class="v17_135">Return on Investment</span>
-    <div class="v21_19"></div>
-    <span class="v21_6">Net cost</span>
-    <span class="v21_8">##€</span>
-    <span class="v21_9">##€</span>
-    <span class="v21_11">#Years</span>
-    <span class="v21_15">Available subsides </span>
-    <span class="v21_10">Payback time</span>
-    <span class="v17_136">##%</span></div>
-    <div class="v17_137"><div class="v17_138"></div>
-    <span class="v17_139">Priority ranking category</span>
-    <span class="v17_140">Estimated waiting time: ##</span>
-    <div class="v17_141"></div>
-    <span class="v17_142">#</span></div>
-    <div class="v17_143"><div class="v17_144"></div>
-    <span class="v17_145">Address: </span></div>
-   
-</div>
-<div id="map"></div>
-</div>
-   
-   
-	<script>
-	
-	var myMap = L.map('map').setView([48.137154, 11.576124], 13);
+      </div>
+      <div class="v17_129">
+        <div class="v17_130"></div>
+        <span class="v17_131">Carbon footprint reduction</span>
+        <div class="v23_20"></div><span class="v17_132">##%</span>
+      </div>
+      <div class="v23_21">
+        <div class="v23_22"></div>
+        <span class="v23_23">Germany-wide ranking</span>
+        <div class="v23_24"></div><span class="v23_25">###</span>
+      </div>
+      <div class="v17_133">
+        <div class="v17_134"></div>
+        <span class="v17_135">Return on Investment</span>
+        <div class="v21_19"></div>
+        <span class="v21_6">Net cost</span>
+        <span class="v21_8">##€</span>
+        <span class="v21_9">##€</span>
+        <span class="v21_11">#Years</span>
+        <span class="v21_15">Available subsides </span>
+        <span class="v21_10">Payback time</span>
+        <span class="v17_136">##%</span>
+      </div>
+      <div class="v17_137">
+        <div class="v17_138"></div>
+        <span class="v17_139">Priority ranking category</span>
+        <span class="v17_140">Estimated waiting time: ##</span>
+        <div class="v17_141"></div>
+        <span class="v17_142">#</span>
+      </div>
+      <div class="v17_143">
+        <div class="v17_144"></div>
+      </div>
 
-	L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	  maxZoom: 18,
-	  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(myMap);
-	
-    googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
+    </div>
+    <div id="map"></div>
+  </div>
+  <script src="10building.js"></script>
+  <script src="final_solar_panel_location.js"></script>
+  <script>
+
+    var myMap = L.map('map').setView([51.33962, 12.37129], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(myMap);
+
+    googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+      maxZoom: 12,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
     //googleSat.addTo(myMap);
 
-    googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
+    googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
     //googleTerrain.addTo(myMap);
-	
-    //Marker
-    var singleMarker = L.marker([48.137154, 11.576124],{draggable: true});
-    var popup = singleMarker.bindPopup("The coordinates are: "+singleMarker.getLatLng()).openPopup();
-    popup.addTo(myMap);
-    </script>
-	
-  </body>
+    
+
+L.geoJSON(dataJSON, {
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup("Osm ID: "+ feature.properties.osm_id + " Elec: " + feature.properties.final_elec);
+    
+  }
+}).addTo(myMap);
+
+
+
+
+
+
+  </script>
+
+</body>
 
 </html>
-
- 
